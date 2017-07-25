@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block body %}
+<div class="content center center-div col-xs-6">
+  <h3>Admin Dashboard</h3>
+</div>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <a href="{{ url_for('admin.update_catalog') }}" class="dash-option">Add to Catalog</a>
+    <a href="{{ url_for('admin.edit_catalog') }}" class="dash-option">Edit Catalog</a>
+    <a href="#" class="dash-option">Manage Admin</a>
+  </div>
+</div>
+{% endblock %}

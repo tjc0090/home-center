@@ -1,0 +1,63 @@
+{% extends "index.html" %}
+{% block title %}Catalog{% endblock %}
+{% block body %}
+<div class="content center center-div col-xs-6">
+  <h3>Search Our Catalog</h3>
+</div>
+  <section class="search-form">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-xs-3">
+          <label for="color" class="search-label search-lineup">Color:</label>
+          <input type="text" name="color" id="search-color" class="search-input block full-width">
+        </div>
+        <div class="col-xs-3">
+          <label for="price" class="search-label">Price:</label>
+          <select class="search-select" id="price-select">
+            <option value="less">Less than</option>
+            <option value="greater">Greater than</option>
+          </select>
+          <input type="number" name="price" id="search-price" class="search-input block full-width">
+        </div>
+        <div class="col-xs-2">
+          <label for="chairs" class="search-label full-width">No. of chairs:</label>
+          <select class="search-select" id="search-chair-select">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="8">8+</option>
+          </select>
+        </div>
+        <div class="col-xs-4">
+          <label for="dimensions" class="search-label">Dimensions:</label>
+          <select class="search-select" id="dimension-select">
+            <option value="less">Less than</option>
+            <option value="greater">Greater than</option>
+            <option value="exactly">Exactly</option>
+          </select>
+          <div class="row">
+            <label for="length" class="search-label">L:</label>
+            <input type="number" name="length" id="search-length" class="dimension search-input">
+            <label for="width" class="search-label dimension-label">W:</label>
+            <input type="number" name="length" id="search-width" class="dimension search-input">
+            <label for="height" class="search-label dimension-label">H:</label>
+            <input type="number" name="length" id="search-height" class="dimension search-input">
+          </div>
+        </div>
+      </div>
+      <div class="row center center-div">
+        <div class="col-xs-12">
+          <button type="btn" id="search-btn">Search</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="search-results">
+
+  </section>
+  
+
+{% endblock %}

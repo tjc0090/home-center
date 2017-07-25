@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="row">
+  <div class="jumbotron">
+
+  </div>
+</div>
+<h1 class="center headline">The Home Center</h1>
+<h3 class="center">Quality furniture in DFW for over 30 years</h3>
+<section class="callouts bottom">
+  <div class="row">
+    <div class="col-xs-6 center">
+      <img class="callout-img" src="{{ url_for('static', filename='img/bed-sketch-flip.png') }}" alt="image not found"/>
+      <p>New-in-box sets</p>
+      <p>Open-box sets at discounted prices</p>
+      <p>Kitchen, bedroom, and more</p>
+    </div>
+    <div class="col-xs-6 center">
+      <img class="callout-img" src="{{ url_for('static', filename='img/bed-sketch.png') }}" alt="image not found"/>
+      <p>60 day layaway available</p>
+      <p>We will load your vehicle</p>
+      <p>Delivery available</p>
+    </div>
+  </div>
+{% endblock %}

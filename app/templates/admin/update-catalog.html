@@ -1,0 +1,17 @@
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "index.html" %}
+{% block title %}Update Catalog{% endblock %}
+{% block body %}
+<div class="content">
+  <br/>
+  {{ utils.flashed_messages() }}
+  <div class="center center-div">
+    <h1>Update Catalog</h1>
+  </div>
+    <br/>
+  <div class="col-xs-12 bottom">
+    {{ wtf.quick_form(form, form_type='horizontal', horizontal_columns=('xs',2,6), enctype='multipart/form-data') }}
+  </div>
+</div>
+{% endblock %}

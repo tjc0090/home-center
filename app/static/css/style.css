@@ -1,0 +1,151 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+a {
+  color: #d81717;
+}
+
+/* overwrite bootstrap defaults */
+.color-link {
+  color: #d81717 !important;
+}
+
+.jumbotron {
+  width: 100%;
+  padding: 0;
+  margin-top: 38px;
+  background: url("/static/img/masthead.jpg") no-repeat center center;
+  background-size: cover;
+  height: 500px;
+}
+
+.headline {
+  font-size: 42px;
+  margin-top: 10px;
+}
+
+.block {
+  display: block;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.center-div {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+.content {
+  margin-top: 60px;
+}
+
+.bottom {
+  margin-bottom: 150px;
+}
+
+#header {
+  background-color: #535050;
+  color: #fff;
+}
+
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #535050;
+  font-size: 16px;
+  color: #fff;
+  padding-bottom: 2em;
+  clear: both;
+}
+
+.footer-content {
+  max-width: 1200px;;
+  margin: 10px 0 0 15px;
+  position: relative;
+}
+
+.dash-option {
+  padding: 0 15px;
+}
+
+.callout-img {
+  background-size: contain;
+  height: 150px;
+}
+
+.search-form {
+  width: 90%;
+  margin: 40px auto;
+  padding: 40px 10px;
+  border: 1px solid #abb1a9;
+  border-radius: 5px;
+}
+
+.search-label {
+  font-size: 14px;
+}
+
+.search-lineup {
+  margin-top: 7px;
+}
+
+.search-select {
+  background-color: #fff;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.search-input {
+  font-size: 16px;
+  border-style: none;
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+}
+
+.dimension-label {
+  padding-left: 8px;
+}
+
+.dimension {
+  width: 20%;
+  min-width: 30px;
+}
+
+#search-btn {
+  font-size: 20px;
+  margin-top: 25px;
+  color: #d81717;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+
+#search-results {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-photo {
+  height: 400px;
+  width: 100%;
+  background-size: contain;
+}
+
+#edit-image {
+  display: none;
+}
+
+#messages {
+  display: none;
+}

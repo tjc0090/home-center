@@ -1,0 +1,59 @@
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "index.html" %}
+{% block title %}Update Catalog{% endblock %}
+{% block body %}
+<div class="content">
+  <br/>
+  {{ utils.flashed_messages() }}
+  <div class="center center-div">
+    <h1>Edit Catalog</h1>
+  </div>
+    <br/>
+  <div class="row">
+    <div class="col-xs-12 bottom">
+      <label for="item" class="search-label">Catalog No.</label>
+      <input type="text" id="edit-item">
+      <button type="btn" class="admin-btn" id="admin-edit-search-btn">Search</button>
+      or <button type="btn" class="admin-btn" id="admin-delete-btn">Delete</button>
+    </div>
+  </div>
+  <div class="row" id="messages">
+    <div class="col-xs-12 center">
+      <p>The item has been deleted.</p>
+    </div>
+  </div>
+  <section id="edit-section">
+    <div class="col-xs-row">
+      <div class="col-xs-6 bottom">
+        <form class="form form-horizontal" method="post" role="form" id="edit-form">
+          {{ form.hidden_tag() }}
+          {{ wtf.form_errors(form) }}
+          {{ wtf.form_field(form.name, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.catalog_no, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.price, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.length, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.width, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.height, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.color, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.chair_count, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.chair_color, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.chair_length, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.chair_width, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+          {{ wtf.form_field(form.chair_height, form_type='horizontal', horizontal_columns=('xs', 2, 10)) }}
+        <fieldset>
+          <label for="new-image">Select a file</label>
+          <input name="new-image" type="file" id='new-image'>
+        </fieldset>
+          <button type="btn" class="admin-btn" id="edit-now-btn">Submit</button>
+        </form>
+      </div>
+      <div class="col-xs-6">
+        <img src="" alt="image not found" id="edit-image" />
+      </div>
+
+
+    </div>
+  </section>
+</div>
+{% endblock %}
