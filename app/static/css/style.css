@@ -77,9 +77,17 @@ a {
   padding: 0 15px;
 }
 
+.callouts ul {
+  margin-left: 30%;
+  margin-top: 15px;
+}
+
 .callout-img {
   background-size: contain;
   height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .search-form {
@@ -129,6 +137,10 @@ a {
   background-color: #fff;
 }
 
+.stripe {
+  background-color: #ececec;
+}
+
 
 #search-results {
   width: 90%;
@@ -148,4 +160,11 @@ a {
 
 #messages {
   display: none;
+}
+
+@media only screen and (min-width: 2000px) {
+  .callouts ul {
+    margin-left: 40%;
+    margin-top: 15px;
+  }
 }

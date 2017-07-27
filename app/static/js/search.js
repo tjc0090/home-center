@@ -4,28 +4,28 @@ $(document).ready(function(){
   $( '#search-btn' ).click(function(){
     $('.results').remove()
     var searchObj = {}
-    if ($('#search-color').val() != undefined) {
+    if ($('#search-color').val() != undefined && $('#search-color').val().length > 0) {
       searchObj.color = $('#search-color').val()
     }
 
-    if ($('#search-price').val() != undefined) {
+    if ($('#search-price').val() != undefined && $('#search-price').val().length > 0) {
       searchObj.price = $('#search-price').val()
       searchObj.priceRange = $('#price-select').val()
     }
 
-    if ($('#search-chair-select').val() != undefined) {
+    if ($('#search-chair-select').val() != undefined && $('#search-chair-select').val() != 'none') {
       searchObj.chair_count = $('#search-chair-select').val()
     }
 
-    if ($('#search-length').val() != undefined) {
+    if ($('#search-length').val() != undefined && $('#search-length').val().length > 0) {
       searchObj.length = $('#search-length').val()
     }
 
-    if ($('#search-width').val() != undefined) {
+    if ($('#search-width').val() != undefined && $('#search-width').val().length > 0) {
       searchObj.width = $('#search-width').val()
     }
 
-    if ($('#search-height').val() != undefined) {
+    if ($('#search-height').val() != undefined && $('#search-height').val().length > 0) {
       searchObj.height = $('#search-height').val()
     }
 
@@ -44,13 +44,20 @@ $(document).ready(function(){
           console.log(response);
           if (response.results.length > 0) {
             $.each(response.results, function(index, obj){
+              console.log("index", index)
               if (!obj.photo) {
                 obj.photo = 'app/static/img/yose.jpg'
               }
               var photo = obj.photo.slice(3)
-              var html = '<div class="row results"><div class="col-xs-6">'
+              if (index === 1 || index % 2 != 0) {
+                var html = '<div class="row results stripe"><div class="col-xs-6">'
+              }
+              else {
+                var html = '<div class="row results"><div class="col-xs-6">'
+              }
+
               html += '<h3>' + obj.name + " #" + obj.catalog_no + '</h3>'
-              html += '<h5>' + obj.price + '</h5>'
+              html += '<h5>$' + obj.price + '</h5>'
               html += '<p>L: ' + obj.length + ' W: ' + obj.width + " H: " + obj.height + '</p>'
               html += '<p>Color: ' + obj.color + '</p>'
               html += '<p>Chairs: ' + obj.chair_count + ', color: ' + obj.chair_color + '</p>'
